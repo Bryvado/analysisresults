@@ -122,3 +122,11 @@ body {
 .social-links a:hover {
     color: #0073e6;
 }
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+}
