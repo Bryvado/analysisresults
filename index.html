@@ -8,47 +8,55 @@
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Header Section -->
+    <header class="hero" role="banner">
         <h1>Bryson Kloesel</h1>
         <p>Writer, Researcher, Student</p>
-    </section>
+    </header>
 
-    <!-- Articles Section -->
-    <section class="articles">
-        <h2>All Articles</h2>
-        <div class="article-grid">
-            <div class="article">
-                <img src="path/to/image1.jpg" alt="Article Thumbnail 1" class="article-thumbnail">
-                <h4>Former historic preservation student at GW leads Rock Creek Park as superintendent</h4>
-                <p class="article-date">November 2024</p>
-                <p class="article-preview">A closer look at the journey and impact of a historic preservation student who now oversees one of D.C.’s beloved parks...</p>
+    <!-- Main Content -->
+    <main>
+        <!-- Articles Section -->
+        <section class="articles" aria-labelledby="articles-heading">
+            <h2 id="articles-heading">All Articles</h2>
+            <div class="article-grid">
+                <article class="article">
+                    <img src="path/to/image1.jpg" alt="Former historic preservation student at GW leads Rock Creek Park as superintendent" class="article-thumbnail">
+                    <h3>Former historic preservation student at GW leads Rock Creek Park as superintendent</h3>
+                    <p class="article-date">November 2024</p>
+                    <p class="article-preview">A closer look at the journey and impact of a historic preservation student who now oversees one of D.C.’s beloved parks...</p>
+                </article>
+                <article class="article">
+                    <img src="path/to/image2.jpg" alt="ANC presents revisions to bylaws, confirms two members’ resignations" class="article-thumbnail">
+                    <h3>ANC presents revisions to bylaws, confirms two members’ resignations</h3>
+                    <p class="article-date">October 2024</p>
+                    <p class="article-preview">In an effort to improve transparency, the ANC discusses key bylaw changes and addresses recent member resignations...</p>
+                </article>
+                <!-- Add more articles here with similar structure -->
             </div>
-            <div class="article">
-                <img src="path/to/image2.jpg" alt="Article Thumbnail 2" class="article-thumbnail">
-                <h4>ANC presents revisions to bylaws, confirms two members’ resignations</h4>
-                <p class="article-date">October 2024</p>
-                <p class="article-preview">In an effort to improve transparency, the ANC discusses key bylaw changes and addresses recent member resignations...</p>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <img src="https://media.licdn.com/dms/image/D5603AQHEdKmdfi-2Cw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1702159913830?e=1736985600&v=beta&t=9FTrHjj0PiHRy6qnkC" alt="Bryson Kloesel" class="profile-img">
+            <p>Born in Texas, living in Washington, D.C., writing wherever the wind blows.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Me</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/bryson-kloesel-49965327a/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="mailto:brysonkloesel@example.com" aria-label="Email Bryson Kloesel">Email</a>
             </div>
-            <!-- Add more articles here with similar structure -->
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- About Section -->
-    <section class="about">
-        <h2>About Me</h2>
-        <img src="https://media.licdn.com/dms/image/D5603AQHEdKmdfi-2Cw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1702159913830?e=1736985600&v=beta&t=9FTrHjj0PiHRy6qnkC8Yb9SwXAEx1q5wzbKviF_hnXY" alt="Bryson Kloesel" class="about-img">
-        <p>Born in Texas, living in Washington, D.C., writing wherever the wind blows.</p>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact">
-        <h2>Contact Me</h2>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/bryson-kloesel-49965327a/" target="_blank">LinkedIn</a>
-            <a href="mailto:brysonkloesel@example.com">Email</a>
-        </div>
-    </section>
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>&copy; 2024 Bryson Kloesel. All rights reserved.</p>
+    </footer>
 
 </body>
 </html>
