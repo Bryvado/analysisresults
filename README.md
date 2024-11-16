@@ -1,2 +1,2 @@
-# analysisresults
-Contains personal files with analysis of various datasets
+## Portfolio ##
+*Selections of my work and indepdendent analyses*
