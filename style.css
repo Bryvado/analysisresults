@@ -1,87 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 /* General Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
     line-height: 1.6;
+    background: #f9f9f9;
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
-    background: #f4f4f4;
-    padding: 60px 20px;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    padding: 80px 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin: 0;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.5rem;
+    color: #eee;
 }
 
 /* Articles Section */
 .articles {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
+    background: white;
 }
 
 .articles h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
 }
 
 .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 30px;
     justify-items: center;
 }
 
 .article {
-    max-width: 300px;
+    max-width: 350px;
     background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    border-radius: 8px;
-    text-align: left;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.article-thumbnail {
+.article:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.article img {
     width: 100%;
-    height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-.article h4 {
-    font-size: 1.1rem;
+.article h3 {
+    font-size: 1.5rem;
     color: #333;
-    margin: 10px 0;
 }
 
-.article-date {
-    font-size: 0.9rem;
+.article p {
     color: #666;
-}
-
-.article-preview {
-    font-size: 0.95rem;
-    color: #666;
-    margin-top: 5px;
 }
 
 /* About Section */
 .about {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
     background: #f4f4f4;
 }
 
-.about-img {
+.about img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
@@ -89,27 +93,30 @@ body {
 }
 
 .about p {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
+    font-size: 1.2rem;
 }
 
 /* Contact Section */
 .contact {
-    padding: 40px 20px;
+    padding: 60px 20px;
     text-align: center;
+    background: white;
 }
 
 .contact h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
 .social-links a {
     display: inline-block;
-    margin: 0 10px;
+    margin: 0 15px;
     color: #333;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    transition: color 0.3s;
 }
 
 .social-links a:hover {
