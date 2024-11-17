@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* CSS Variables */
+/* Light Theme Variables */
 :root {
     --primary-color: #6e8efb;
     --secondary-color: #a777e3;
@@ -9,20 +9,35 @@
     --light-text-color: #666;
     --hero-bg-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     --font-family: 'Roboto', sans-serif;
+    --card-bg-color: #ffffff;
+    --card-shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* General Reset */
+/* Dark Theme Variables */
+[data-theme="dark"] {
+    --primary-color: #bb86fc; /* Softer accent color for dark theme */
+    --secondary-color: #03dac6;
+    --bg-color: #121212; /* Very dark background for contrast */
+    --text-color: #e0e0e0; /* Light text color */
+    --light-text-color: #b0b0b0; /* Muted text color for secondary text */
+    --hero-bg-gradient: linear-gradient(135deg, #bb86fc, #03dac6);
+    --card-bg-color: #1e1e1e; /* Dark background for cards */
+    --card-shadow-color: rgba(0, 0, 0, 0.5); /* Stronger shadow in dark mode */
+}
+
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body {
     font-family: var(--font-family);
     color: var(--text-color);
-    line-height: 1.6;
     background-color: var(--bg-color);
+    line-height: 1.6;
 }
 
 /* Hero Section */
@@ -31,7 +46,7 @@ body {
     background: var(--hero-bg-gradient);
     color: #fff;
     padding: 60px 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px var(--card-shadow-color);
 }
 
 .hero h1 {
@@ -41,7 +56,7 @@ body {
 
 .hero p {
     font-size: 1.5rem;
-    color: #eee;
+    color: #ddd;
 }
 
 /* Navigation */
@@ -49,7 +64,7 @@ body {
     margin-bottom: 20px;
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
 }
 
 .hero nav a {
@@ -71,9 +86,10 @@ main {
 
 /* Articles Section */
 .articles {
-    background: #fff;
+    background: var(--card-bg-color);
     padding: 60px 20px;
     text-align: center;
+    box-shadow: 0 4px 12px var(--card-shadow-color);
 }
 
 .articles h2 {
@@ -91,8 +107,8 @@ main {
 
 .article {
     max-width: 350px;
-    background: #fff;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    background: var(--card-bg-color);
+    box-shadow: 0 6px 18px var(--card-shadow-color);
     border-radius: 10px;
     overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
@@ -100,7 +116,7 @@ main {
 
 .article:hover {
     transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 12px 24px var(--card-shadow-color);
 }
 
 .article img {
@@ -123,9 +139,10 @@ main {
 
 /* About Section */
 .about {
-    background: #f4f4f4;
+    background: var(--card-bg-color);
     padding: 60px 20px;
     text-align: center;
+    box-shadow: 0 4px 12px var(--card-shadow-color);
 }
 
 .about img {
@@ -144,9 +161,10 @@ main {
 
 /* Contact Section */
 .contact {
-    background: #fff;
+    background: var(--card-bg-color);
     padding: 60px 20px;
     text-align: center;
+    box-shadow: 0 4px 12px var(--card-shadow-color);
 }
 
 .contact h2 {
@@ -181,9 +199,10 @@ main {
 footer {
     text-align: center;
     padding: 20px;
-    background: var(--text-color);
-    color: #fff;
+    background: #1a1a1a;
+    color: #e0e0e0;
     font-size: 0.9rem;
+    box-shadow: 0 4px 12px var(--card-shadow-color);
 }
 
 /* Responsive Design */
@@ -206,54 +225,3 @@ footer {
         grid-template-columns: 1fr;
     }
 }
-
-/* Default light theme colors */
-:root {
-    --bg-color: #f9f9f9;
-    --text-color: #333;
-    --primary-color: #6e8efb;
-}
-
-/* Dark theme overrides */
-/* Dark theme overrides */
-[data-theme="dark"] {
-    --bg-color: #1e1e1e; /* Darker background for better contrast */
-    --text-color: #e0e0e0; /* Lighter text for readability */
-    --primary-color: #bb86fc; /* Softer accent color */
-    --secondary-color: #03dac6; /* Muted secondary color */
-    --light-text-color: #b0b0b0; /* Slightly lighter for secondary text */
-    --hero-bg-gradient: linear-gradient(135deg, #bb86fc, #03dac6); /* Adjusted gradient */
-}
-[data-theme="dark"] .hero {
-    background: var(--hero-bg-gradient);
-    color: #ffffff;
-}
-
-[data-theme="dark"] .article {
-    background: #2e2e2e; /* Slightly lighter than main background */
-    color: var(--text-color);
-}
-
-[data-theme="dark"] footer {
-    background: #1a1a1a; /* Dark footer background */
-    color: var(--text-color);
-}
-
-[data-theme="dark"] .social-links a {
-    background-color: var(--secondary-color);
-}
-
-[data-theme="dark"] .hero nav a {
-    color: var(--text-color);
-}
-
-[data-theme="dark"] #theme-toggle {
-    color: var(--text-color);
-}
-[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 {
-    color: #ffffff; /* Pure white for headers */
-}
-[data-theme="dark"] .article {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
-}
-
