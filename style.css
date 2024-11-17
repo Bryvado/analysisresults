@@ -206,3 +206,17 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Default light theme colors */
+:root {
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --primary-color: #6e8efb;
+}
+
+/* Dark theme overrides */
+[data-theme="dark"] {
+    --bg-color: #333;
+    --text-color: #f9f9f9;
+    --primary-color: #a777e3;
+}
