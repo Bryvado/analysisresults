@@ -53,7 +53,9 @@
     </script>
 </head>
 <body>
-    <button aria-label="Toggle light/dark mode" id="theme-toggle">Toggle Theme</button>
+    <button aria-label="Toggle light/dark mode" id="theme-toggle">
+        <span id="theme-icon">🌞</span> <span id="theme-text">Light Mode</span>
+    </button>
 
     <!-- Header Section -->
     <header class="hero" role="banner">
@@ -76,7 +78,7 @@
             <div class="article-grid">
                 <article class="article">
                     <a aria-label="Read article: Former historic preservation student at GW leads Rock Creek Park as superintendent" href="articles/11-11-2024.html">
-                        <img alt="Former historic preservation student at GW leads Rock Creek Park as superintendent" class="article-thumbnail" data-src="thumbnails/11-11-2024.jpg" loading="lazy">
+                        <img alt="Former historic preservation student at GW leads Rock Creek Park as superintendent" class="article-thumbnail" src="thumbnails/11-11-2024.jpg">
                     </a>
                     <div class="article-content">
                         <h3>Former historic preservation student at GW leads Rock Creek Park as superintendent</h3>
@@ -85,7 +87,7 @@
                 </article>
                 <article class="article">
                     <a aria-label="Read article: ANC presents revisions to bylaws, confirms two members’ resignations" href="articles/10-17-2024.html">
-                        <img alt="ANC presents revisions to bylaws, confirms two members’ resignations" class="article-thumbnail" data-src="thumbnails/10-17-2024.jpg" loading="lazy">
+                        <img alt="ANC presents revisions to bylaws, confirms two members’ resignations" class="article-thumbnail" src="thumbnails/10-17-2024.jpg">
                     </a>
                     <div class="article-content">
                         <h3>ANC presents revisions to bylaws, confirms two members’ resignations</h3>
@@ -94,7 +96,7 @@
                 </article>
                 <article class="article">
                     <a aria-label="Read article: Kennedy Center design proposal to add park space, eliminate highway tunnels" href="articles/4-11-2024.html">
-                        <img alt="Kennedy Center design proposal to add park space, eliminate highway tunnels" class="article-thumbnail" data-src="thumbnails/4-11-2024.jpg" loading="lazy">
+                        <img alt="Kennedy Center design proposal to add park space, eliminate highway tunnels" class="article-thumbnail" src="thumbnails/4-11-2024.jpg">
                     </a>
                     <div class="article-content">
                         <h3>Kennedy Center design proposal to add park space, eliminate highway tunnels</h3>
@@ -103,7 +105,7 @@
                 </article>
                 <article class="article">
                     <a aria-label="Read article: Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom" href="articles/pnlkndyfgy.html">
-                        <img alt="Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom" class="article-thumbnail" data-src="thumbnails/3-4-2024.jpg" loading="lazy">
+                        <img alt="Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom" class="article-thumbnail" src="thumbnails/3-4-2024.jpg">
                     </a>
                     <div class="article-content">
                         <h3>Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom</h3>
@@ -116,7 +118,7 @@
         <!-- About Section -->
         <section aria-labelledby="about-heading" class="about">
             <h2 id="about-heading">About Me</h2>
-            <img alt="Bryson Kloesel" class="profile-img" data-src="portrait/Me!.jpg" loading="lazy">
+            <img alt="Bryson Kloesel" class="profile-img" src="portrait/Me!.jpg">
             <p>Born in Texas, living in Washington, D.C., writing wherever the wind blows.</p>
         </section>
 
@@ -138,70 +140,32 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const savedTheme = localStorage.getItem("theme");
+            const themeToggle = document.getElementById("theme-toggle");
+            const themeIcon = document.getElementById("theme-icon");
+            const themeText = document.getElementById("theme-text");
+
             if (savedTheme) {
                 document.documentElement.setAttribute("data-theme", savedTheme);
+                updateThemeToggleText(savedTheme);
             }
 
-            document.getElementById("theme-toggle").addEventListener("click", function() {
+            themeToggle.addEventListener("click", function() {
                 const currentTheme = document.documentElement.getAttribute("data-theme");
                 const newTheme = currentTheme === "dark" ? "light" : "dark";
                 document.documentElement.setAttribute("data-theme", newTheme);
                 localStorage.setItem("theme", newTheme);
-            });
-        });
-    </script>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const images = document.querySelectorAll("img[data-src]");
-            const observer = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.getAttribute("data-src");
-                        img.removeAttribute("data-src");
-                        observer.unobserve(img);
-                    }
-                });
-            });
-            images.forEach(img => observer.observe(img));
-        });
-    </script>
-
-    <div id="article-section"></div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const articleSection = document.getElementById("article-section");
-            const articles = [
-                { title: "Former historic preservation student at GW leads Rock Creek Park as superintendent", imgSrc: "thumbnails/11-11-2024.jpg", date: "11-11-2024" },
-                { title: "ANC presents revisions to bylaws, confirms two members’ resignations", imgSrc: "thumbnails/10-17-2024.jpg", date: "10-17-2024" },
-                { title: "Kennedy Center design proposal to add park space, eliminate highway tunnels", imgSrc: "thumbnails/4-11-2024.jpg", date: "04-11-2024" }
-            ];
-
-            articles.forEach(article => {
-                const articleDiv = document.createElement("div");
-                articleDiv.classList.add("article-item");
-                articleDiv.innerHTML = `
-                    <img data-src="${article.imgSrc}" alt="${article.title}" class="article-thumbnail" loading="lazy">
-                    <h3>${article.title}</h3>
-                    <p>Published on ${article.date}</p>
-                `;
-                articleSection.appendChild(articleDiv);
+                updateThemeToggleText(newTheme);
             });
 
-            const lazyLoadArticles = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target.querySelector("img[data-src]");
-                        if (img) {
-                            img.src = img.getAttribute("data-src");
-                            img.removeAttribute("data-src");
-                        }
-                        observer.unobserve(entry.target);
-                    }
-                });
-            });
-            document.querySelectorAll(".article-item").forEach(item => lazyLoadArticles.observe(item));
+            function updateThemeToggleText(theme) {
+                if (theme === "dark") {
+                    themeIcon.textContent = "🌜";
+                    themeText.textContent = "Dark Mode";
+                } else {
+                    themeIcon.textContent = "🌞";
+                    themeText.textContent = "Light Mode";
+                }
+            }
         });
     </script>
 </body>
