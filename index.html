@@ -1,95 +1,217 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Bryson Kloesel, showcasing articles and personal projects.">
-    <meta name="keywords" content="Bryson Kloesel, portfolio, articles, projects">
-    <title>Bryson Kloesel - Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Portfolio of Bryson Kloesel, showcasing articles and personal projects." name="description"/>
+<meta content="Bryson Kloesel, portfolio, articles, projects" name="keywords"/>
+<title>Bryson Kloesel - Portfolio</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="path/to/favicon.ico" rel="icon" type="image/x-icon"/>
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Portfolio of Bryson Kloesel",
+    "description": "A portfolio showcasing the work and projects of Bryson Kloesel, a student at George Washington University.",
+    "url": "https://example.com",
+
+    "author": {
+        "@type": "Person",
+        "name": "Bryson Kloesel",
+        "affiliation": "George Washington University",
+        "url": "https://example.com"
+    },
+
+    "datePublished": "2024-01-01",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://example.com/portrait/Me!.jpg",
+        "height": 800,
+        "width": 600
+    },
+
+    "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "url": "https://example.com/articles/10-17-2024.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "url": "https://example.com/articles/11-11-2024.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "url": "https://example.com/articles/4-11-2024.html"
+            }
+        ]
+    }
+}
+</script>
 </head>
-<body>
+<body><button aria-label="Toggle light/dark mode" id="theme-toggle">Toggle Theme</button>
+<!-- Header Section -->
+<header class="hero" role="banner">
+<nav aria-label="Main Navigation" class="main-nav">
+<a href="#articles-heading">Articles</a>
+<a href="#about-heading">About Me</a>
+<a href="#contact-heading">Contact</a>
+</nav>
+<div class="hero-content">
+<h1>Bryson Kloesel</h1>
+<p>Writer, Researcher, Student</p>
+</div>
+</header>
+<!-- Main Content -->
+<main>
+<!-- Articles Section -->
+<section aria-labelledby="articles-heading" class="articles">
+<h2 id="articles-heading">All Articles</h2>
+<div class="article-grid">
+<article class="article">
+<a aria-label="Read article: Former historic preservation student at GW leads Rock Creek Park as superintendent" href="articles/11-11-2024.html">
+<img alt="Former historic preservation student at GW leads Rock Creek Park as superintendent" class="article-thumbnail" data-src="thumbnails/11-11-2024.jpg" loading="lazy"/>
+</a>
+<div class="article-content">
+<h3>Former historic preservation student at GW leads Rock Creek Park as superintendent</h3>
+<p class="article-date">November 2024</p>
+</div>
+</article>
+<article class="article">
+<a aria-label="Read article: ANC presents revisions to bylaws, confirms two members’ resignations" href="articles/10-17-2024.html">
+<img alt="ANC presents revisions to bylaws, confirms two members’ resignations" class="article-thumbnail" data-src="thumbnails/10-17-2024.jpg" loading="lazy"/>
+</a>
+<div class="article-content">
+<h3>ANC presents revisions to bylaws, confirms two members’ resignations</h3>
+<p class="article-date">October 2024</p>
+</div>
+</article>
+<article class="article">
+<a aria-label="Read article: Kennedy Center design proposal to add park space, eliminate highway tunnels" href="articles/4-11-2024.html">
+<img alt="Kennedy Center design proposal to add park space, eliminate highway tunnels" class="article-thumbnail" data-src="thumbnails/4-11-2024.jpg" loading="lazy"/>
+</a>
+<div class="article-content">
+<h3>Kennedy Center design proposal to add park space, eliminate highway tunnels</h3>
+<p class="article-date">April 2024</p>
+</div>
+</article>
+<article class="article">
+<a aria-label="Read article: Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom" href="articles/pnlkndyfgy.html">
+<img alt="Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom" class="article-thumbnail" data-src="thumbnails/3-4-2024.jpg" loading="lazy"/>
+</a>
+<div class="article-content">
+<h3>Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom</h3>
+<p class="article-date">March 2024</p>
+</div>
+</article>
+</div>
+</section>
+<!-- About Section -->
+<section aria-labelledby="about-heading" class="about">
+<h2 id="about-heading">About Me</h2>
+<img alt="Bryson Kloesel" class="profile-img" data-src="portrait/Me!.jpg" loading="lazy"/>
+<p>Born in Texas, living in Washington, D.C., writing wherever the wind blows.</p>
+</section>
+<!-- Contact Section -->
+<section aria-labelledby="contact-heading" class="contact">
+<h2 id="contact-heading">Contact Me</h2>
+<div class="social-links">
+<a aria-label="LinkedIn Profile" href="https://www.linkedin.com/in/bryson-kloesel-49965327a/" rel="noopener noreferrer" target="_blank">LinkedIn</a>
+<a aria-label="Email Bryson Kloesel" href="mailto:brysonkloesel@example.com">Email</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer role="contentinfo">
+<p>© 2024 Bryson Kloesel. All rights reserved.</p>
+</footer>
 
-    <!-- Header Section -->
-    <header class="hero" role="banner">
-        <nav aria-label="Main Navigation" class="main-nav">
-            <a href="#articles-heading">Articles</a>
-            <a href="#about-heading">About Me</a>
-            <a href="#contact-heading">Contact</a>
-        </nav>
-        <div class="hero-content">
-            <h1>Bryson Kloesel</h1>
-            <p>Writer, Researcher, Student</p>
-        </div>
-    </header>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Check if a preferred theme is stored in localStorage
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+    }
 
-    <!-- Main Content -->
-    <main>
-        <!-- Articles Section -->
-        <section class="articles" aria-labelledby="articles-heading">
-            <h2 id="articles-heading">All Articles</h2>
-            <div class="article-grid">
-                <article class="article">
-                    <a href="articles/11-11-2024.html" aria-label="Read article: Former historic preservation student at GW leads Rock Creek Park as superintendent">
-                        <img src="thumbnails/11-11-2024.jpg?raw=true" alt="Former historic preservation student at GW leads Rock Creek Park as superintendent" class="article-thumbnail" loading="lazy">
-                    </a>
-                    <div class="article-content">
-                        <h3>Former historic preservation student at GW leads Rock Creek Park as superintendent</h3>
-                        <p class="article-date">November 2024</p>
-                    </div>
-                </article>
-                <article class="article">
-                    <a href="articles/10-17-2024.html" aria-label="Read article: ANC presents revisions to bylaws, confirms two members’ resignations">
-                        <img src="thumbnails/10-17-2024.jpg?raw=true" alt="ANC presents revisions to bylaws, confirms two members’ resignations" class="article-thumbnail" loading="lazy">
-                    </a>
-                    <div class="article-content">
-                        <h3>ANC presents revisions to bylaws, confirms two members’ resignations</h3>
-                        <p class="article-date">October 2024</p>
-                    </div>
-                </article>
-                <article class="article">
-                    <a href="articles/4-11-2024.html" aria-label="Read article: Kennedy Center design proposal to add park space, eliminate highway tunnels">
-                        <img src="thumbnails/4-11-2024.jpg?raw=true" alt="Kennedy Center design proposal to add park space, eliminate highway tunnels" class="article-thumbnail" loading="lazy">
-                    </a>
-                    <div class="article-content">
-                        <h3>Kennedy Center design proposal to add park space, eliminate highway tunnels</h3>
-                        <p class="article-date">April 2024</p>
-                    </div>
-                </article>
-                <article class="article">
-                    <a href="articles/pnlkndyfgy.html" aria-label="Read article: Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom">
-                        <img src="thumbnails/3-4-2024.jpg?raw=true" alt="Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom" class="article-thumbnail" loading="lazy">
-                    </a>
-                    <div class="article-content">
-                        <h3>Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom</h3>
-                        <p class="article-date">March 2024</p>
-                    </div>
-                </article>
-            </div>
-        </section>
+    // Toggle button functionality
+    document.getElementById("theme-toggle").addEventListener("click", function() {
+        let currentTheme = document.documentElement.getAttribute("data-theme");
+        let newTheme = currentTheme === "dark" ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", newTheme);
+        localStorage.setItem("theme", newTheme);  // Save the selected theme
+    });
+});
+</script>
 
-        <!-- About Section -->
-        <section class="about" aria-labelledby="about-heading">
-            <h2 id="about-heading">About Me</h2>
-            <img src="portrait/Me!.jpg" alt="Bryson Kloesel" class="profile-img" loading="lazy">
-            <p>Born in Texas, living in Washington, D.C., writing wherever the wind blows.</p>
-        </section>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll("img[data-src]");
 
-        <!-- Contact Section -->
-        <section class="contact" aria-labelledby="contact-heading">
-            <h2 id="contact-heading">Contact Me</h2>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/bryson-kloesel-49965327a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">LinkedIn</a>
-                <a href="mailto:brysonkloesel@example.com" aria-label="Email Bryson Kloesel">Email</a>
-            </div>
-        </section>
-    </main>
+    // Intersection Observer for lazy loading
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.getAttribute("data-src");
+                img.removeAttribute("data-src");
+                observer.unobserve(img);  // Stop observing once loaded
+            }
+        });
+    });
 
-    <!-- Footer -->
-    <footer role="contentinfo">
-        <p>&copy; 2024 Bryson Kloesel. All rights reserved.</p>
-    </footer>
+    // Apply observer to each image
+    images.forEach(img => observer.observe(img));
+});
+</script>
+<div id="article-section"></div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const articleSection = document.getElementById("article-section");  // Placeholder for articles
 
+    // Sample articles data (could be retrieved from a server dynamically in a real app)
+    const articles = [
+        { title: "Former historic preservation student at GW leads Rock Creek Park as superintendent", imgSrc: "thumbnails/11-11-2024.jpg", date: "11-11-2024" },
+        { title: "ANC presents revisions to bylaws, confirms two members’ resignations", imgSrc: "thumbnails/10-17-2024.jpg", date: "10-17-2024" },
+        { title: "Kennedy Center design proposal to add park space, eliminate highway tunnels", imgSrc: "thumbnails/4-11-2024.jpg", date: "04-11-2024" }
+    ];
+
+    // Create placeholders for each article
+    articles.forEach(article => {
+        const articleDiv = document.createElement("div");
+        articleDiv.classList.add("article-item");
+        articleDiv.innerHTML = `
+            <img data-src="${article.imgSrc}" alt="${article.title}" class="article-thumbnail" loading="lazy">
+            <h3>${article.title}</h3>
+            <p>Published on ${article.date}</p>
+        `;
+        articleSection.appendChild(articleDiv);
+    });
+
+    // Lazy-load images within dynamically added articles
+    const lazyLoadArticles = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target.querySelector("img[data-src]");
+                if (img) {
+                    img.src = img.getAttribute("data-src");
+                    img.removeAttribute("data-src");
+                }
+                observer.unobserve(entry.target);  // Stop observing once loaded
+            }
+        });
+    });
+
+    // Observe each dynamically added article
+    document.querySelectorAll(".article-item").forEach(item => lazyLoadArticles.observe(item));
+});
+</script>
 </body>
 </html>
