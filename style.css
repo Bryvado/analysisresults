@@ -224,13 +224,36 @@ footer {
     --light-text-color: #b0b0b0; /* Slightly lighter for secondary text */
     --hero-bg-gradient: linear-gradient(135deg, #bb86fc, #03dac6); /* Adjusted gradient */
 }
-/* Dark theme overrides */
-[data-theme="dark"] {
-    --bg-color: #1e1e1e; /* Darker background for better contrast */
-    --text-color: #e0e0e0; /* Lighter text for readability */
-    --primary-color: #bb86fc; /* Softer accent color */
-    --secondary-color: #03dac6; /* Muted secondary color */
-    --light-text-color: #b0b0b0; /* Slightly lighter for secondary text */
-    --hero-bg-gradient: linear-gradient(135deg, #bb86fc, #03dac6); /* Adjusted gradient */
+[data-theme="dark"] .hero {
+    background: var(--hero-bg-gradient);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .article {
+    background: #2e2e2e; /* Slightly lighter than main background */
+    color: var(--text-color);
+}
+
+[data-theme="dark"] footer {
+    background: #1a1a1a; /* Dark footer background */
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .social-links a {
+    background-color: var(--secondary-color);
+}
+
+[data-theme="dark"] .hero nav a {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] #theme-toggle {
+    color: var(--text-color);
+}
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3 {
+    color: #ffffff; /* Pure white for headers */
+}
+[data-theme="dark"] .article {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
 
