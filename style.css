@@ -47,12 +47,14 @@ body {
 /* Navigation */
 .hero nav {
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .hero nav a {
     color: #fff;
     text-decoration: none;
-    margin: 0 15px;
     font-size: 1.1rem;
     font-weight: 700;
     transition: color 0.3s;
@@ -104,6 +106,7 @@ main {
 .article img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 .article h3 {
@@ -152,9 +155,14 @@ main {
     color: var(--text-color);
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
 .social-links a {
     display: inline-block;
-    margin: 0 15px;
     padding: 8px 15px;
     border-radius: 5px;
     color: #fff;
@@ -192,5 +200,9 @@ footer {
 
     .hero nav a {
         font-size: 1rem;
+    }
+
+    .article-grid {
+        grid-template-columns: 1fr;
     }
 }
