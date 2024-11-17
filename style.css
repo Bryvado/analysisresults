@@ -55,10 +55,10 @@ body {
 }
 
 .article-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers the articles horizontally */
     gap: 30px;
-    justify-items: center;
 }
 
 .article {
