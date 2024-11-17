@@ -7,7 +7,7 @@
     <meta name="keywords" content="Bryson Kloesel, portfolio, articles, projects">
     <title>Bryson Kloesel - Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="https://bryvado.github.io/portfolio/favicon.ico" type="image/x-icon">
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -52,11 +52,10 @@
     </script>
 </head>
 <body>
-    <button aria-label="Toggle light/dark mode" id="theme-toggle" class="theme-toggle">
+    <button aria-label="Toggle light/dark mode" id="theme-toggle">
         <span id="theme-icon">🌞</span> <span id="theme-text">Light Mode</span>
     </button>
 
-    <!-- Header Section -->
     <header class="hero" role="banner">
         <nav aria-label="Main Navigation" class="main-nav">
             <a href="#articles-heading">Articles</a>
@@ -69,24 +68,55 @@
         </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-        <!-- Articles Section -->
         <section aria-labelledby="articles-heading" class="articles">
             <h2 id="articles-heading">All Articles</h2>
             <div class="article-grid">
-                <!-- Articles here -->
+                <article class="article">
+                    <a aria-label="Read article: Former historic preservation student at GW leads Rock Creek Park as superintendent" href="articles/11-11-2024.html">
+                        <img alt="Former historic preservation student at GW leads Rock Creek Park as superintendent" class="article-thumbnail" src="thumbnails/11-11-2024.jpg">
+                    </a>
+                    <div class="article-content">
+                        <h3>Former historic preservation student at GW leads Rock Creek Park as superintendent</h3>
+                        <p class="article-date">November 2024</p>
+                    </div>
+                </article>
+                <article class="article">
+                    <a aria-label="Read article: ANC presents revisions to bylaws, confirms two members’ resignations" href="articles/10-17-2024.html">
+                        <img alt="ANC presents revisions to bylaws, confirms two members’ resignations" class="article-thumbnail" src="thumbnails/10-17-2024.jpg">
+                    </a>
+                    <div class="article-content">
+                        <h3>ANC presents revisions to bylaws, confirms two members’ resignations</h3>
+                        <p class="article-date">October 2024</p>
+                    </div>
+                </article>
+                <article class="article">
+                    <a aria-label="Read article: Kennedy Center design proposal to add park space, eliminate highway tunnels" href="articles/4-11-2024.html">
+                        <img alt="Kennedy Center design proposal to add park space, eliminate highway tunnels" class="article-thumbnail" src="thumbnails/4-11-2024.jpg">
+                    </a>
+                    <div class="article-content">
+                        <h3>Kennedy Center design proposal to add park space, eliminate highway tunnels</h3>
+                        <p class="article-date">April 2024</p>
+                    </div>
+                </article>
+                <article class="article">
+                    <a aria-label="Read article: Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom" href="articles/pnlkndyfgy.html">
+                        <img alt="Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom" class="article-thumbnail" src="thumbnails/3-4-2024.jpg">
+                    </a>
+                    <div class="article-content">
+                        <h3>Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom</h3>
+                        <p class="article-date">March 2024</p>
+                    </div>
+                </article>
             </div>
         </section>
 
-        <!-- About Section -->
         <section aria-labelledby="about-heading" class="about">
             <h2 id="about-heading">About Me</h2>
             <img alt="Bryson Kloesel" class="profile-img" src="portrait/Me!.jpg">
             <p>Born in Texas, living in Washington, D.C., writing wherever the wind blows.</p>
         </section>
 
-        <!-- Contact Section -->
         <section aria-labelledby="contact-heading" class="contact">
             <h2 id="contact-heading">Contact Me</h2>
             <div class="social-links">
@@ -96,7 +126,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer role="contentinfo">
         <p>© 2024 Bryson Kloesel. All rights reserved.</p>
     </footer>
