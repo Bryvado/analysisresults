@@ -3,68 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <meta name="description" content="Portfolio of Bryson Kloesel, showcasing articles and personal projects.">
+    <meta name="keywords" content="Bryson Kloesel, portfolio, articles, projects">
+    <title>Bryson Kloesel - Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="path/to/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
     <!-- Header Section -->
-    <header>
-        <div class="container">
-            <h1>My Portfolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="articles.html">Articles</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="hero" role="banner">
+        <h1>Bryson Kloesel</h1>
+        <p>Writer, Researcher, Student</p>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Discover my latest work, articles, and insights into web development and design.</p>
-        </div>
-    </section>
-
-    <!-- Articles Section -->
-    <section class="articles">
-        <div class="container">
-            <h2>Latest Articles</h2>
-            <div class="articles-grid">
-                <article>
-                    <img src="thumbnails/10-17-2024.jpg" alt="Thumbnail for article 1">
-                    <h3><a href="articles/11-11-2024.html">Exploring Responsive Design</a></h3>
-                    <p>Learn how to make websites look amazing on any screen size...</p>
+    <!-- Main Content -->
+    <main>
+        <!-- Articles Section -->
+        <section class="articles" aria-labelledby="articles-heading">
+            <h2 id="articles-heading">All Articles</h2>
+            <div class="article-grid">
+                <article class="article">
+                    <a href="articles/11-11-2024.html">
+                        <img src="thumbnails/11-11-2024.jpg?raw=true" alt="Former historic preservation student at GW leads Rock Creek Park as superintendent" class="article-thumbnail" loading="lazy">
+                    </a>
+                    <h3>Former historic preservation student at GW leads Rock Creek Park as superintendent</h3>
+                    <p class="article-date">November 2024</p>
                 </article>
-                <article>
-                    <img src="thumbnails/11-11-2024.jpg" alt="Thumbnail for article 2">
-                    <h3><a href="articles/11-11-2024.html">CSS Grid vs. Flexbox</a></h3>
-                    <p>Which one should you use for layout design? Find out here...</p>
+                <article class="article">
+                    <a href="articles/ancoct24.html">
+                        <img src="thumbnails/10-17-2024.jpg?raw=true" alt="ANC presents revisions to bylaws, confirms two members’ resignations" class="article-thumbnail" loading="lazy">
+                    </a>
+                    <h3>ANC presents revisions to bylaws, confirms two members’ resignations</h3>
+                    <p class="article-date">October 2024</p>
                 </article>
-                <article>
-                    <img src="thumbnails/2-22-2024.jpg" alt="Thumbnail for article 3">
-                    <h3><a href="articles/11-11-2024.html">JavaScript Best Practices</a></h3>
-                    <p>A guide to writing clean, efficient JavaScript code...</p>
+                <article class="article">
+                    <a href="articles/kndyptmcfwy.html">
+                        <img src="thumbnails/4-11-2024.jpg?raw=true" alt="Kennedy Center design proposal to add park space, eliminate highway tunnels" loading="lazy">
+                    </a>
+                    <h3>Kennedy Center design proposal to add park space, eliminate highway tunnels</h3>
+                    <p class="article-date">April 2024</p>
                 </article>
-                <!-- Additional articles can follow the same structure -->
+                <article class="article">
+                    <a href="articles/pnlkndyfgy.html">
+                        <img src="thumbnails/3-4-2024.jpg?raw=true" alt="Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom" class="article-thumbnail" loading="lazy">
+                    </a>
+                    <h3>Panel looks to bridge physical divide between Kennedy Center and Foggy Bottom</h3>
+                    <p class="article-date">March 2024</p>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
-            <ul class="social-links">
-                <li><a href="https://github.com/username" target="_blank">GitHub</a></li>
-                <li><a href="https://twitter.com/username" target="_blank">Twitter</a></li>
-                <li><a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a></li>
-            </ul>
-        </div>
+        <!-- About Section -->
+        <section class="about" aria-labelledby="about-heading">
+            <h2 id="about-heading">About Me</h2>
+            <img src="portrait/Me!.jpg" alt="Bryson Kloesel" class="profile-img" loading="lazy">
+            <p>Born in Texas, living in Washington, D.C., writing wherever the wind blows.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" aria-labelledby="contact-heading">
+            <h2 id="contact-heading">Contact Me</h2>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/bryson-kloesel-49965327a/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="mailto:brysonkloesel@example.com" aria-label="Email Bryson Kloesel">Email</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer role="contentinfo">
+        <p>&copy; 2024 Bryson Kloesel. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
