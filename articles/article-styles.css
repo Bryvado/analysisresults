@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-/* CSS Variables (reuse if not already in style.css) */
+/* CSS Variables */
 :root {
     --primary-color: #6e8efb;
     --secondary-color: #a777e3;
@@ -11,17 +11,23 @@
     --font-family: 'Roboto', sans-serif;
 }
 
-/* Specific Styling for Article Pages */
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
 
-/* Hero Section for Article Pages */
+/* Hero Section */
 .hero.article-hero {
     padding: 60px 20px;
     background: var(--hero-bg-gradient);
     color: #fff;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
+    border-radius: 0 0 20px 20px;
 }
 
 .hero.article-hero h1 {
@@ -37,7 +43,7 @@
     margin-top: 5px;
 }
 
-/* Article Content Container */
+/* Article Content */
 .article-content {
     max-width: 800px;
     margin: 20px auto;
@@ -48,17 +54,14 @@
     line-height: 1.8;
 }
 
-/* Typography within Article Content */
 .article-content h2,
 .article-content h3,
 .article-content h4 {
     color: var(--primary-color);
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    margin: 1.5em 0 0.5em;
     line-height: 1.3;
 }
 
-/* Specific Styling for Headers */
 .article-content h2 {
     font-size: 1.8rem;
     font-weight: 700;
@@ -74,14 +77,11 @@
     font-weight: 600;
 }
 
-/* Paragraph Styling within Article Content */
 .article-content p {
     font-size: 1.1rem;
-    color: var(--text-color);
     margin-bottom: 1.5em;
 }
 
-/* Link Styling within Article Content */
 .article-content a {
     color: var(--primary-color);
     text-decoration: underline;
@@ -92,7 +92,6 @@
     color: var(--secondary-color);
 }
 
-/* Blockquote Styling */
 .article-content blockquote {
     font-size: 1.2rem;
     color: var(--light-text-color);
@@ -102,7 +101,6 @@
     background: #f9f9f9;
 }
 
-/* Image Styling within Article Content */
 .article-content img {
     width: 100%;
     height: auto;
@@ -111,7 +109,7 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Specific to Article Pages */
+/* Footer */
 footer.article-footer {
     text-align: center;
     padding: 20px;
@@ -120,34 +118,31 @@ footer.article-footer {
     font-size: 0.9rem;
 }
 
-/* Responsive Design Adjustments for Article Pages */
+/* Responsive Design */
 @media (max-width: 768px) {
-    /* Hero Section Heading for Small Screens */
     .hero.article-hero h1 {
         font-size: 2rem;
     }
-    
-    /* Article Content Padding for Small Screens */
+
     .article-content {
         padding: 20px;
     }
-    
-    /* Header Sizes for Smaller Screens */
+
     .article-content h2 {
         font-size: 1.6rem;
     }
-    
+
     .article-content h3 {
         font-size: 1.3rem;
     }
 }
-/* Add styles for the content container */
+
+/* Content Container */
 .content-container {
     display: flex;
     flex-wrap: wrap;
 }
 
-/* Sidebar styling */
 .sidebar {
     flex: 1;
     max-width: 250px;
@@ -184,10 +179,9 @@ footer.article-footer {
     color: var(--secondary-color);
 }
 
-/* Adjust article content styling to accommodate sidebar */
 .article-content {
     flex: 3;
-    max-width: calc(100% - 270px); /* Adjusted max-width considering sidebar width */
+    max-width: calc(100% - 270px);
     margin: 20px auto;
     padding: 40px 30px;
     background-color: #ffffff;
@@ -196,7 +190,6 @@ footer.article-footer {
     line-height: 1.8;
 }
 
-/* Responsive adjustments for the sidebar and content container */
 @media (max-width: 768px) {
     .content-container {
         flex-direction: column;
