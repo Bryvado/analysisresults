@@ -11,29 +11,32 @@
     --font-family: 'Roboto', sans-serif;
 }
 
-/* General Styling */
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: var(--font-family);
     color: var(--text-color);
-    margin: 0;
-    padding: 0;
     line-height: 1.6;
-    background: var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 /* Hero Section */
 .hero {
     text-align: center;
     background: var(--hero-bg-gradient);
-    color: white;
-    padding: 80px 20px;
+    color: #fff;
+    padding: 60px 20px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s;
 }
 
 .hero h1 {
     font-size: 3rem;
-    margin: 0;
+    margin-bottom: 10px;
 }
 
 .hero p {
@@ -41,33 +44,55 @@ body {
     color: #eee;
 }
 
+/* Navigation */
+.hero nav {
+    margin-bottom: 20px;
+}
+
+.hero nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.hero nav a:hover {
+    color: var(--secondary-color);
+}
+
+/* Main Sections */
+main {
+    padding: 40px 20px;
+}
+
 /* Articles Section */
 .articles {
+    background: #fff;
     padding: 60px 20px;
     text-align: center;
-    background: white;
 }
 
 .articles h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
     color: var(--text-color);
+    margin-bottom: 40px;
 }
 
 .article-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Centers the articles horizontally */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 30px;
+    justify-items: center;
 }
 
 .article {
-    margin: 20px;
     max-width: 350px;
     background: #fff;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     border-radius: 10px;
+    overflow: hidden;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
@@ -78,61 +103,70 @@ body {
 
 .article img {
     width: 100%;
-    border-radius: 10px;
+    height: auto;
 }
 
 .article h3 {
     font-size: 1.5rem;
+    padding: 15px 20px 0;
     color: var(--text-color);
 }
 
 .article p {
+    padding: 10px 20px 20px;
     color: var(--light-text-color);
+    font-size: 0.9rem;
 }
 
 /* About Section */
 .about {
+    background: #f4f4f4;
     padding: 60px 20px;
     text-align: center;
-    background: #f4f4f4;
 }
 
 .about img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .about p {
     max-width: 700px;
     margin: 0 auto;
     font-size: 1.2rem;
+    color: var(--light-text-color);
 }
 
 /* Contact Section */
 .contact {
+    background: #fff;
     padding: 60px 20px;
     text-align: center;
-    background: white;
 }
 
 .contact h2 {
     font-size: 2.5rem;
     margin-bottom: 30px;
+    color: var(--text-color);
 }
 
 .social-links a {
     display: inline-block;
     margin: 0 15px;
-    color: var(--text-color);
-    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: var(--primary-color);
     font-size: 1.2rem;
-    transition: color 0.3s;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .social-links a:hover {
-    color: #0073e6;
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
 }
 
 /* Footer */
@@ -140,16 +174,23 @@ footer {
     text-align: center;
     padding: 20px;
     background: var(--text-color);
-    color: white;
+    color: #fff;
+    font-size: 0.9rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
     .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .articles h2,
+    .about h2,
+    .contact h2 {
         font-size: 2rem;
     }
 
-    .articles h2 {
-        font-size: 2rem;
+    .hero nav a {
+        font-size: 1rem;
     }
 }
