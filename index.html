@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <div class="container">
             <h1>My Portfolio</h1>
@@ -21,32 +22,48 @@
         </div>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="container">
-                <h2>Welcome to My Portfolio</h2>
-                <p>Explore my latest articles, projects, and insights.</p>
-            </div>
-        </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Discover my latest work, articles, and insights into web development and design.</p>
+        </div>
+    </section>
 
-        <section class="articles">
-            <div class="container">
-                <h2>Latest Articles</h2>
-                <div class="articles-grid">
-                    <article>
-                        <img src="thumbnails/10-17-2024.jpg" alt="Thumbnail for article 1">
-                        <h3><a href="articles/11-11-2024.html">Article Title 1</a></h3>
-                        <p>A brief description of the article goes here...</p>
-                    </article>
-                    <!-- Repeat <article> blocks for other articles -->
-                </div>
+    <!-- Articles Section -->
+    <section class="articles">
+        <div class="container">
+            <h2>Latest Articles</h2>
+            <div class="articles-grid">
+                <article>
+                    <img src="thumbnails/10-17-2024.jpg" alt="Thumbnail for article 1">
+                    <h3><a href="articles/11-11-2024.html">Exploring Responsive Design</a></h3>
+                    <p>Learn how to make websites look amazing on any screen size...</p>
+                </article>
+                <article>
+                    <img src="thumbnails/11-11-2024.jpg" alt="Thumbnail for article 2">
+                    <h3><a href="articles/11-11-2024.html">CSS Grid vs. Flexbox</a></h3>
+                    <p>Which one should you use for layout design? Find out here...</p>
+                </article>
+                <article>
+                    <img src="thumbnails/2-22-2024.jpg" alt="Thumbnail for article 3">
+                    <h3><a href="articles/11-11-2024.html">JavaScript Best Practices</a></h3>
+                    <p>A guide to writing clean, efficient JavaScript code...</p>
+                </article>
+                <!-- Additional articles can follow the same structure -->
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
+    <!-- Footer Section -->
     <footer>
         <div class="container">
             <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+            <ul class="social-links">
+                <li><a href="https://github.com/username" target="_blank">GitHub</a></li>
+                <li><a href="https://twitter.com/username" target="_blank">Twitter</a></li>
+                <li><a href="https://linkedin.com/in/username" target="_blank">LinkedIn</a></li>
+            </ul>
         </div>
     </footer>
 </body>
