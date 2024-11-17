@@ -205,3 +205,73 @@ footer.article-footer {
         margin: 20px 0;
     }
 }
+/* Dark theme overrides */
+[data-theme="dark"] {
+    --bg-color: #1e1e1e; /* Darker background for contrast */
+    --text-color: #e0e0e0; /* Light text color */
+    --light-text-color: #b0b0b0; /* Muted light text */
+    --primary-color: #bb86fc; /* Softer purple primary color */
+    --secondary-color: #03dac6; /* Softer green secondary color */
+    --hero-bg-gradient: linear-gradient(135deg, #bb86fc, #03dac6); /* Gradient for hero */
+}
+
+/* Hero Section */
+[data-theme="dark"] .hero {
+    background: var(--hero-bg-gradient);
+    color: #ffffff;
+}
+
+/* Article and Card Backgrounds */
+[data-theme="dark"] .article, 
+[data-theme="dark"] .articles, 
+[data-theme="dark"] .about, 
+[data-theme="dark"] .contact,
+[data-theme="dark"] .sidebar,
+[data-theme="dark"] .article-content {
+    background: #2e2e2e; /* Slightly lighter than main background */
+    color: var(--text-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Shadow for depth */
+}
+
+/* Footer */
+[data-theme="dark"] footer {
+    background: #1a1a1a; /* Dark footer background */
+    color: var(--text-color);
+}
+/* Dark theme overrides for article-specific pages */
+[data-theme="dark"] .article-hero {
+    background: var(--hero-bg-gradient);
+    color: #ffffff;
+}
+
+[data-theme="dark"] .article-content, 
+[data-theme="dark"] .sidebar {
+    background-color: #2e2e2e; /* Article background */
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .article-content h2,
+[data-theme="dark"] .article-content h3,
+[data-theme="dark"] .article-content h4 {
+    color: #bb86fc; /* Lighter primary color for headings */
+}
+
+[data-theme="dark"] .article-content p, 
+[data-theme="dark"] .sidebar p {
+    color: var(--light-text-color); /* Muted color for regular text */
+}
+
+[data-theme="dark"] .article-content a,
+[data-theme="dark"] .sidebar a {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .article-content blockquote {
+    background: #333333; /* Darker background for blockquotes */
+    color: var(--light-text-color);
+    border-left: 4px solid #bb86fc; /* Primary color for blockquote border */
+}
+* {
+    transition: background-color 0.3s, color 0.3s;
+}
+
