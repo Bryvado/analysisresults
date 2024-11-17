@@ -1,17 +1,22 @@
-/* General Styling for Improved Readability */
-body {
-    font-family: var(--font-family);
-    color: var(--text-color);
-    background-color: #fdfdfd;
-    margin: 0;
-    padding: 0;
-    line-height: 1.75;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* CSS Variables (reuse if not already in style.css) */
+:root {
+    --primary-color: #6e8efb;
+    --secondary-color: #a777e3;
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --light-text-color: #666;
+    --hero-bg-gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    --font-family: 'Roboto', sans-serif;
 }
 
+/* Specific Styling for Article Pages */
+
 /* Hero Section for Article Pages */
-.hero {
+.hero.article-hero {
     padding: 60px 20px;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: var(--hero-bg-gradient);
     color: #fff;
     text-align: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -19,20 +24,20 @@ body {
     border-bottom-right-radius: 20px;
 }
 
-.hero h1 {
+.hero.article-hero h1 {
     font-size: 2.8rem;
     font-weight: 700;
     margin-bottom: 10px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.hero p {
+.hero.article-hero p {
     font-size: 1.2rem;
     color: #e0e0e0;
     margin-top: 5px;
 }
 
-/* Article Content Styling */
+/* Article Content Container */
 .article-content {
     max-width: 800px;
     margin: 20px auto;
@@ -43,6 +48,7 @@ body {
     line-height: 1.8;
 }
 
+/* Typography within Article Content */
 .article-content h2,
 .article-content h3,
 .article-content h4 {
@@ -73,7 +79,7 @@ body {
     margin-bottom: 1.5em;
 }
 
-/* Links in Article */
+/* Links in Article Content */
 .article-content a {
     color: var(--primary-color);
     text-decoration: underline;
@@ -94,7 +100,7 @@ body {
     background: #f9f9f9;
 }
 
-/* Image Styling */
+/* Image Styling within Article Content */
 .article-content img {
     width: 100%;
     height: auto;
@@ -103,8 +109,8 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Footer Styling */
-footer {
+/* Footer Specific to Article Pages (if different from other pages) */
+footer.article-footer {
     text-align: center;
     padding: 20px;
     background: var(--text-color);
@@ -112,9 +118,9 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive Design */
+/* Responsive Design Adjustments for Article Pages */
 @media (max-width: 768px) {
-    .hero h1 {
+    .hero.article-hero h1 {
         font-size: 2rem;
     }
     .article-content {
